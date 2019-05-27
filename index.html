@@ -3,13 +3,20 @@
 <head>
 <script>
     function myFunction() {
-        var x = document.getElementById("tcno").innerHTML;
+        var x = document.getElementById("tcno").value;
         var intX = parseInt(x, 10);
+        var X = new Array();
         for (i = 8; i >= 0; i--) {
-            int[i] = intX%10;
-            intX = intX/10;
+            X[i] = intX%10;
+            intX = Math.floor(intX/10);
         }
-        document.getElementById("demo").innerHTML = int[5];
+        X[9] = (7*(X[0]+X[2]+X[4]+X[6]+X[8]) - (X[1]+X[3]+X[5]+X[7]))%10;
+        X[10] = (X[0]+X[1]+X[2]+X[3]+X[4]+X[5]+X[6]+X[7]+X[8]+X[9])%10;
+        var tcno = "";
+        for (i = 0; i<11; i++){
+            tcno = tcno + X[i];
+        }
+        document.getElementById("demo").innerHTML = tcno;
     }
 </script>
 </head>
