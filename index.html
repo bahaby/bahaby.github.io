@@ -2,18 +2,22 @@
 <html>
 <head>
 <script>
-function myFunction() {
-  var x = document.getElementById("demo").innerHTML;
-  document.getElementById("demo2").innerHTML = x;
-}
+    function myFunction() {
+        var x = document.getElementById("tcno").innerHTML;
+        var intX = parseInt(x, 10);
+        for (i = 8; i >= 0; i--) {
+            int[i] = intX%10;
+            intX = intX/10;
+        }
+        document.getElementById("tcno").innerHTML = int[5];
+    }
 </script>
 </head>
 <body>
 
-<h1>A Web Page</h1>
-<p id="demo">A Paragraph2</p>
-<p id="demo2">A Paragraph</p>
-<button type="button" onclick="myFunction()">Try it</button>
+<h1>TC NO</h1>
+<input id="tcno" type="text">
+<button type="button" onclick="myFunction()">Onayla</button>
 
 </body>
 </html>
