@@ -16,16 +16,15 @@
         for (i = 0; i<11; i++){
             tcno = tcno + X[i];
         }
-        document.getElementById("demo").innerHTML = tcno;
+        document.getElementById("tcno").value = tcno;
     }
 </script>
 </head>
 <body>
 
-<h1>TC NO</h1>
-<p id="demo"></p>
+<h1>TC NO'nun ilk 9 hanesini gir</h1>
 <input id="tcno" type="text">
-<button type="button" onclick="myFunction()">Onayla</button>
+<button type="button" onclick="myFunction()">Tamamını Gör</button>
 
 </body>
 </html>
